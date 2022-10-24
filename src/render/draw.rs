@@ -59,7 +59,8 @@ mod test {
         let red_star = Polygon::<5>::from_array(&star_array);
 
         draw_polygon(&mut canvas, &red_star);
-
-        canvas.save_png("./red_star.png").unwrap();
+        
+        let expected = Pixmap::load_polygon("test/img/red_star.png");
+        assert_eq!(red_star, expected)
     }
 }

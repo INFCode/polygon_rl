@@ -2,6 +2,7 @@
 #![feature(trait_alias)]
 mod render;
 mod utils;
+mod ssim;
 
 fn main() {
     println!("Hello, world!");
